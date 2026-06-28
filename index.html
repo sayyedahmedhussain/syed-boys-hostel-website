@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="VTOjFbCTFgJn0uRjR7vguTuKqLSE_9iSoyEocMWl_e0, width=device-width, initial-scale=1.0"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Looking for a boys hostel in Rawalpindi? Syed Boys Hostel in Shamsabad offers safe, affordable rooms with WiFi, mess & security for students and job holders. Book your room today."
+    />
+    <title>Syed Boys Hostel</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #f8f9fa;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      a {
+        overflow-wrap: break-word;
+      }
+
+      /* Navbar */
+      nav {
+        background: #0d6efd;
+        padding: 15px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .logo {
+        color: #f3b552;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.3;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        color: #070805cd;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        color: #ffd700;
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        height: 90vh;
+        min-height: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgba(157, 230, 79, 0.994);
+        padding: 20px;
+        overflow: hidden;
+      }
+
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 2;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 800px;
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        margin: 5px;
+        background: #0d6efd;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .btn:hover {
+        background: #084298;
+      }
+
+      /* Why Choose Us */
+      .section {
+        padding: 60px 8%;
+        text-align: center;
+      }
+
+      .section h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+      }
+
+      .card p {
+        line-height: 1.6;
+      }
+
+      /* New Section */
+      .new-sec {
+        padding: 40px 8% 60px;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .new-text h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+
+      .new-text p {
+        font-size: 17px;
+        line-height: 1.7;
+        text-align: left;
+      }
+
+      .image-side img {
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .center-btn {
+        text-align: center;
+        margin-top: 35px;
+      }
+
+      /* Gallery */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      /* Footer */
+      footer {
+        background: #212529;
+        color: #fff;
+        text-align: center;
+        padding: 25px;
+      }
+
+      footer p {
+        line-height: 1.6;
+        margin-bottom: 8px;
+      }
+
+      footer a {
+        color: #ffd700;
+        text-decoration: none;
+        margin: 0 8px;
+      }
+
+      /* Tablet Responsive */
+      @media (max-width: 992px) {
+        nav {
+          padding: 15px 5%;
+        }
+
+        .logo {
+          font-size: 22px;
+        }
+
+        nav ul {
+          gap: 14px;
+        }
+
+        nav ul li a {
+          font-size: 17px;
+        }
+
+        .hero h1 {
+          font-size: 38px;
+        }
+
+        .container {
+          gap: 22px;
+        }
+
+        .new-text h2 {
+          font-size: 26px;
+        }
+
+        .new-text p {
+          font-size: 16px;
+        }
+
+        .image-side img {
+          height: 280px;
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          padding: 15px 5%;
+          text-align: center;
+        }
+
+        .logo {
+          font-size: 21px;
+          width: 100%;
+        }
+
+        nav ul {
+          margin-top: 8px;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 12px;
+          width: 100%;
+        }
+
+        nav ul li a {
+          font-size: 16px;
+        }
+
+        .hero {
+          height: auto;
+          min-height: 460px;
+          padding: 35px 15px;
+        }
+
+        .hero-content {
+          padding: 24px 18px;
+        }
+
+        .hero h1 {
+          font-size: 32px;
+        }
+
+        .hero p {
+          font-size: 17px;
+          line-height: 1.5;
+        }
+
+        .btn {
+          padding: 11px 20px;
+          font-size: 15px;
+        }
+
+        .section {
+          padding: 45px 5%;
+        }
+
+        .section h2 {
+          font-size: 28px;
+        }
+
+        .features {
+          grid-template-columns: 1fr;
+        }
+
+        .new-sec {
+          padding: 35px 5% 50px;
+        }
+
+        .container {
+          grid-template-columns: 1fr;
+          padding: 20px;
+        }
+
+        .new-text h2 {
+          font-size: 24px;
+          text-align: center;
+        }
+
+        .new-text p {
+          font-size: 16px;
+          text-align: left;
+        }
+
+        .image-side img {
+          height: 260px;
+        }
+
+        footer {
+          padding: 22px 15px;
+        }
+
+        footer a {
+          display: inline-block;
+          margin-top: 6px;
+        }
+      }
+
+      /* Small Mobile Responsive */
+      @media (max-width: 480px) {
+        .logo {
+          font-size: 19px;
+        }
+
+        nav ul {
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        nav ul li a {
+          font-size: 15px;
+        }
+
+        .hero {
+          min-height: 420px;
+        }
+
+        .hero-content {
+          padding: 22px 15px;
+        }
+
+        .hero h1 {
+          font-size: 28px;
+        }
+
+        .hero p {
+          font-size: 15px;
+        }
+
+        .btn {
+          width: 100%;
+          margin: 6px 0;
+          text-align: center;
+        }
+
+        .section {
+          padding: 35px 4%;
+        }
+
+        .section h2 {
+          font-size: 25px;
+        }
+
+        .card {
+          padding: 20px;
+        }
+
+        .new-sec {
+          padding: 30px 4% 45px;
+        }
+
+        .container {
+          padding: 18px;
+          border-radius: 10px;
+        }
+
+        .new-text h2 {
+          font-size: 22px;
+        }
+
+        .new-text p {
+          font-size: 15px;
+          line-height: 1.6;
+        }
+
+        .image-side img {
+          height: 220px;
+        }
+
+        footer p {
+          font-size: 14px;
+        }
+      }
+
+      /* Extra Small Mobile Responsive */
+      @media (max-width: 360px) {
+        .logo {
+          font-size: 17px;
+        }
+
+        nav ul li a {
+          font-size: 14px;
+        }
+
+        .hero h1 {
+          font-size: 24px;
+        }
+
+        .hero p {
+          font-size: 14px;
+        }
+
+        .hero-content {
+          padding: 18px 12px;
+        }
+
+        .new-text h2 {
+          font-size: 20px;
+        }
+
+        .new-text p {
+          font-size: 14px;
+        }
+
+        .image-side img {
+          height: 190px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">𝓗𝓸𝓶𝓮 𝓐𝔀𝓪𝔂 𝓕𝓻𝓸𝓶 𝓗𝓸𝓶𝓮</div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Price and Facilities.html">Price and Facilities</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Background Image -->
+      <img src="sbh front pic.jpg" alt="Syed Boys Hostel" class="hero-bg" />
+
+      <!-- Content -->
+      <div class="hero-content">
+        <h1>
+          Welcome <br />
+          Syed Boys Hostel
+        </h1>
+        <p>Safe, Clean & Affordable Hostel for Students and Job Holders</p>
+        <a href="Price and Facilities.html" class="btn">Book Now</a>
+        <a href="contact.html" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section">
+      <h2>Why Choose Us</h2>
+      <div class="features">
+        <div class="card">
+          <h3>Secure Hostel</h3>
+          <p>24/7 Security and CCTV for student safety.</p>
+        </div>
+
+        <div class="card">
+          <h3>Affordable Price</h3>
+          <p>Budget-friendly rooms for every student.</p>
+        </div>
+
+        <div class="card">
+          <h3>Fast WiFi</h3>
+          <p>High-speed internet for study and entertainment.</p>
+        </div>
+
+        <div class="card">
+          <h3>Clean Rooms</h3>
+          <p>Daily cleaning and hygienic environment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-sec">
+      <div class="container">
+        <!-- Left: Text -->
+        <div class="new-text">
+          <h2 style="color: #0d6efd">
+            Looking for a Boys Hostel in Rawalpindi? You're in the Right Place
+          </h2>
+          <p>
+            Finding a decent boys hostel in Rawalpindi is harder than it should
+            be. Half the listings online are outdated, the rooms in the photos
+            never match what you actually get, and by the time you visit in
+            person you've already wasted a full day. Syed Boys Hostel was built
+            to fix exactly that problem. We're located in Shamsabad, right near
+            Ahmad Khan Quetta Café and the Dhoke Kala Khan taxi stand — an area
+            that's quietly become one of the most convenient spots in Rawalpindi
+            for students and working professionals. You're close to public
+            transport, local markets, and the main roads that connect you to the
+            rest of the city, without paying the inflated rents you'd find
+            closer to Saddar or Bahria. Whether you've just moved to Rawalpindi
+            for university, started a new job, or are simply tired of a hostel
+            that doesn't feel like home, our goal is simple: give you a room
+            that's clean, secure, and genuinely comfortable — at a price that
+            makes sense for a student or a fresh job holder's budget.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="image-side">
+          <img src="sbh front pic.jpg" alt="Description" />
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="container">
+        <!-- Left: Text -->
+        <div class="new-text">
+          <h2 style="color: green">
+            Why Students and Job Holders Choose Us Over Other Hostels in
+            Rawalpindi
+          </h2>
+          <p>
+            When you're searching for hostels in Rawalpindi for students, the
+            things that actually matter rarely show up in a glossy photo. Here's
+            what you're really getting at Syed Boys Hostel: Round-the-clock
+            security — CCTV coverage and a manned entrance, so your family
+            worries less and you sleep better. Genuinely fast WiFi — built for
+            late-night assignments, online classes, and video calls, not just
+            for browsing. Daily cleaning — common areas and washrooms are
+            cleaned every day, not just before a new tenant moves in. Fair,
+            transparent pricing — no hidden "maintenance" charges that show up
+            after you've already paid your advance. A mixed, respectful
+            environment — university students and working professionals living
+            side by side, which keeps the place quieter and more disciplined
+            than a hostel that's all first-year students.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="image-side">
+          <img src="para 2 pic.png" alt="Description" />
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="container">
+        <!-- Left: Text -->
+        <div class="new-text">
+          <h2 style="color: #b63598">Rooms Built for How You Actually Live</h2>
+          <p>
+            Every resident has different needs — some want to share a room and
+            split costs, others prefer more privacy. That's why Syed Boys Hostel
+            offers flexible sharing options, each fitted with proper beds,
+            storage space, and ventilation, so your room never feels cramped
+            even during a Rawalpindi summer. Outside your room, you'll find a
+            clean dining/mess area serving regular home-style meals, common
+            sitting areas to unwind after a long day at university or the
+            office, and easy access to laundry and cleaning services. We
+            designed the hostel around one idea: it should feel less like a
+            temporary stay and more like an actual home base in the city —
+            somewhere you can study, recharge, and get on with your routine
+            without distractions. If you're comparing this to other best hostels
+            in Rawalpindi, the difference usually comes down to consistency — we
+            maintain the same standard of cleanliness and service every week,
+            not just when new tenants are inspecting rooms.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="image-side">
+          <img src="para 3 pic.png" alt="Description" />
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="container">
+        <!-- Left: Text -->
+        <div class="new-text">
+          <h2 style="color: #b63598">
+            Shamsabad — A Smart Location for Students and Professionals
+          </h2>
+          <p>
+            A hostel is only as good as its location, and Shamsabad has quietly
+            become one of Rawalpindi's most practical areas to live in. Here's
+            why it works in your favor: Easy commute — quick access to public
+            transport and the Dhoke Kala Khan taxi stand, so getting to campus
+            or your office doesn't eat up your morning. Everyday essentials
+            nearby — local markets, cafés (including Ahmad Khan Quetta Café
+            right next door), and pharmacies within walking distance. Quieter
+            than the city center — you get a calmer residential feel without
+            being cut off from Rawalpindi's main routes. Budget-friendly area
+            overall — food, transport, and daily expenses in Shamsabad tend to
+            be more affordable than hostels located closer to Saddar or the
+            Cantt area.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="image-side">
+          <img src="para 4 pic.png" alt="Description" />
+        </div>
+      </div>
+
+      <br /><br />
+
+      <div class="container">
+        <!-- Left: Text -->
+        <div class="new-text">
+          <h2 style="color: #b63598">
+            Ready to Make Syed Boys Hostel Your Home in Rawalpindi?
+          </h2>
+          <p>
+            Choosing a hostel is a decision that affects your daily life — your
+            sleep, your study routine, your peace of mind. We'd rather you
+            visit, see the rooms yourself, and ask us anything before you
+            decide, than read a sales pitch and hope it's accurate. Get in touch
+            with us today to check room availability, current pricing, and to
+            schedule a visit. Our team will walk you through everything —
+            sharing options, facilities, and the exact move-in process — so
+            there are no surprises later.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="image-side">
+          <img src="para 5 pic.png" alt="Description" />
+        </div>
+      </div>
+
+      <!-- Centered Blue Button -->
+      <div class="center-btn">
+        <a href="contact.html" class="btn">Book Now</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>📞 Phone: 0331-5604013 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0327-6600777</p>
+      <p>
+        📍 Address: Near Ahmad khan Quetta Cafey, Texi Stand Dhoke Kala Khan
+        Shamsbad Rawalpindi, Pakistan
+      </p>
+      <p>
+        <a href="https://www.facebook.com/share/1LZ9nNfC3T/">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="https://wa.me/+923276600777">WhatsApp</a>
+      </p>
+    </footer>
+  </body>
+</html>

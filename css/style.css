@@ -1,0 +1,152 @@
+/* ====================== New Section ====================== */
+.new-sec {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Left Side - Text Box (Red Border) */
+.new-text {
+    flex: 1;
+    min-width: 300px;
+    border: 5px solid #e74c3c;     /* Red border */
+    padding: 45px 35px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.new-text h2 {
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+    color: #222;
+    line-height: 1.2;
+}
+
+.new-text p {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: #555;
+}
+
+/* Right Side - Image Box (Green Border) */
+.image-side {
+    flex: 1;
+    min-width: 300px;
+    border: 5px solid #27ae60;     /* Green border */
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.image-side img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Responsive - Stack on mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .new-text {
+        padding: 35px 25px;
+    }
+    
+    .new-text h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Centered Blue Button */
+.center-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto;           /* Adds space above and below */
+}
+
+.btn {
+    background-color: #1e88e5;   /* Nice Blue */
+    color: white;
+    padding: 16px 45px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(30, 136, 229, 0.3);
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background-color: #1565c0;   /* Darker Blue on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(30, 136, 229, 0.4);
+}
+
+/* Optional: If you want full width on mobile */
+@media (max-width: 768px) {
+    .btn {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+    }
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Background Image - Best Settings */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Dark Overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 0 20px;
+}
