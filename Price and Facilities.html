@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +14,24 @@
     font-family:Arial, sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+}
+
 body{
     background:#f8f9fa;
     color:#333;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+h1, h2, h3, p, a{
+    overflow-wrap:break-word;
 }
 
 /* Navbar */
@@ -25,25 +41,29 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-}
-
-.logo {
-        color: #f3b552;
-        font-size: 24px;
-        font-weight: bold;
-      }
-nav ul{
-    list-style:none;
-    display:flex;
     gap:20px;
 }
 
- nav ul li a {
-        color: #070805cd;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
-      }
+.logo {
+    color: #f3b552;
+    font-size: 24px;
+    font-weight: bold;
+    line-height:1.3;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+nav ul li a {
+    color: #070805cd;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
 
 nav ul li a:hover{
     color:#ffd700;
@@ -54,6 +74,7 @@ nav ul li a:hover{
     background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
     url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1500&q=80') center/cover;
     height:45vh;
+    min-height:300px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -69,6 +90,7 @@ nav ul li a:hover{
 .header p{
     margin-top:10px;
     font-size:18px;
+    line-height:1.5;
 }
 
 /* Section */
@@ -118,6 +140,7 @@ nav ul li a:hover{
 
 .card p{
     margin:8px 0;
+    line-height:1.5;
 }
 
 .price{
@@ -153,26 +176,222 @@ footer{
     margin-top:40px;
 }
 
+footer p{
+    line-height:1.6;
+    margin-bottom:8px;
+}
+
 footer a{
     color:#ffd700;
     text-decoration:none;
     margin:0 8px;
 }
 
-/* Responsive */
+/* Tablet Responsive */
+@media(max-width:992px){
+    nav{
+        padding:15px 5%;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    nav ul{
+        gap:14px;
+    }
+
+    nav ul li a{
+        font-size:17px;
+    }
+
+    .header h1{
+        font-size:36px;
+    }
+
+    .section{
+        padding:50px 5%;
+    }
+
+    .section h2{
+        font-size:30px;
+    }
+}
+
+/* Mobile Responsive */
 @media(max-width:768px){
     nav{
         flex-direction:column;
         gap:10px;
+        padding:15px 5%;
+        text-align:center;
+    }
+
+    .logo{
+        font-size:21px;
+        width:100%;
     }
 
     nav ul{
         flex-wrap:wrap;
         justify-content:center;
+        gap:12px;
+        width:100%;
+    }
+
+    nav ul li a{
+        font-size:16px;
+    }
+
+    .header{
+        height:auto;
+        min-height:280px;
+        padding:45px 15px;
     }
 
     .header h1{
         font-size:30px;
+    }
+
+    .header p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:45px 5%;
+    }
+
+    .section h2{
+        font-size:28px;
+    }
+
+    .rooms{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .card img{
+        height:240px;
+    }
+
+    .card-content{
+        padding:18px;
+    }
+
+    .facilities-list{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .facility{
+        font-size:16px;
+        padding:16px;
+    }
+
+    footer{
+        padding:22px 15px;
+    }
+
+    footer a{
+        display:inline-block;
+        margin-top:6px;
+    }
+}
+
+/* Small Mobile Responsive */
+@media(max-width:480px){
+    .logo{
+        font-size:19px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    nav ul li a{
+        font-size:15px;
+    }
+
+    .header{
+        min-height:250px;
+        padding:40px 12px;
+    }
+
+    .header h1{
+        font-size:26px;
+    }
+
+    .header p{
+        font-size:15px;
+    }
+
+    .section{
+        padding:35px 4%;
+    }
+
+    .section h2{
+        font-size:25px;
+        margin-bottom:22px;
+    }
+
+    .rooms{
+        gap:18px;
+    }
+
+    .card img{
+        height:210px;
+    }
+
+    .card-content{
+        padding:16px;
+    }
+
+    .card h3{
+        font-size:20px;
+    }
+
+    .price{
+        font-size:19px;
+    }
+
+    .facility{
+        font-size:15px;
+    }
+
+    footer p{
+        font-size:14px;
+    }
+}
+
+/* Extra Small Mobile Responsive */
+@media(max-width:360px){
+    .logo{
+        font-size:17px;
+    }
+
+    nav ul li a{
+        font-size:14px;
+    }
+
+    .header h1{
+        font-size:24px;
+    }
+
+    .header p{
+        font-size:14px;
+    }
+
+    .section h2{
+        font-size:22px;
+    }
+
+    .card img{
+        height:190px;
+    }
+
+    .price{
+        font-size:18px;
     }
 }
 </style>
@@ -255,3 +474,4 @@ footer a{
 
 </body>
 </html>
+```
